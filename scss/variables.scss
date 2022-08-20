@@ -1,0 +1,35 @@
+// colors
+$white: #ffffff;
+
+$darkBlue: hsl(240, 38%, 20%);
+$grayishBlue: hsl(240, 18%, 77%);
+
+// fonts
+$largeFontSize: 32px;
+
+$primaryFontFamily: 'Inter', 'sans-serif';
+$sizeMap: ( "small": 375px, "medium": 768px, "large": 1024px );
+
+@mixin breakpoint-up($size) {
+	@media screen and (min-width: map-get($sizeMap, $size)) {
+		@content;
+	}
+}
+
+
+
+
+
+
+
+@mixin mobile {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 375px) {
+		@content;
+	}
+}
